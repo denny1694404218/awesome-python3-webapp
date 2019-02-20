@@ -1,18 +1,16 @@
-import logging:logging.basicConfig(level=logging.INFO)
-import asyncio, os, json, time
+import asyncio
+
 from datetime import datetime
+
 from aiohttp import web
 
 async def index(request):
-    
-    return web.Response(text='<h1>Index</h1>')
-
+	return web.Response(text='<h>Index</h>')
 
 
 async def hello(request):
-    
-    text = '<h1>hello,s!</h1>'
-    return web.Response(text=text)
+	text = '<h1>hello,s!</h1>'
+	return web.Response(text=text)
 
 async def init():
     app = web.Application()
